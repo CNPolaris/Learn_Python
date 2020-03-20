@@ -15,8 +15,9 @@
 # -*- coding:utf-8 -*-
 from functools import cmp_to_key
 
+
 class Solution:
-    def cmp(self,s1, s2):
+    def cmp(self, s1, s2):
         c1 = s1 + s2
         c2 = s2 + s1
         if c1 == c2:
@@ -25,11 +26,12 @@ class Solution:
             return 1
         else:
             return -1
+
     def PrintMinNumber(self, numbers):
         # write code here
         if numbers is None or len(numbers) == 0:
             return ""
-        res = sorted(numbers, key=cmp_to_key(lambda x, y: self.cmp(str(x) + str(y), str(y) + str(x))))
+        res = sorted(numbers, key=cmp_to_key(lambda x, y: self.cmp(x, y)))
         s = ''
         for i in res:
             s += str(i)
