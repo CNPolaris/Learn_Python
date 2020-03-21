@@ -14,8 +14,6 @@
 
 # -*- coding:utf-8 -*-
 from functools import cmp_to_key
-
-
 class Solution:
     def cmp(self, s1, s2):
         c1 = s1 + s2
@@ -36,7 +34,6 @@ class Solution:
         for i in res:
             s += str(i)
         return s
-
 
 if __name__ == '__main__':
     test = Solution()
