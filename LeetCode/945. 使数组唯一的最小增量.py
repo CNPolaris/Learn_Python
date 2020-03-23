@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 # -*-coding: utf-8 -*-
 # @Time    : 2020/3/22 22:33
@@ -17,7 +16,6 @@ class Solution(object):
         :type A: List[int]
         :rtype: int
         """
-        
         count = [0] * 80000
         for x in A:
             count[x] += 1
