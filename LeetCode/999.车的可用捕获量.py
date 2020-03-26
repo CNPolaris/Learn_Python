@@ -16,6 +16,7 @@
 另外，车不能与其他友方（白色）象进入同一个方格。
 返回车能够在一次移动中捕获到的卒的数量。
 '''
+
 class Solution(object):
     def numRookCaptures(self, board):
         """
