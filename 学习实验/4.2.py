@@ -12,7 +12,7 @@ def Calculation(num):
 
 
 res = []
-s = input()
+s = input("输入一串整数数字（以空格作为分隔符）：")
 n = s.split(' ')
 for i in n:
     res.append(eval(i))

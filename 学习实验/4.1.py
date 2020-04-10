@@ -6,9 +6,9 @@
 # @Email   : 1875091912@qq.com
 import collections
 
-N = input()
+N = input("输入一串整数")
 res = collections.Counter(N)
-ans = res.keys()
+ans = set(res.keys())
 sum = 0
 for i in ans:
     sum += eval(i)
