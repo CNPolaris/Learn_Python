@@ -23,6 +23,7 @@ def getTxt():
 
 
 ans = Counter(getTxt())
-
-print(ans.most_common(10))
-# print(ans)
+lastTxt=tuple(ans.most_common(10))
+# print(ans.most_common(10))
+for i in range(10):
+    print("词或单词：{0} 出现次数{1}".format(lastTxt[i][0],lastTxt[i][1]))
