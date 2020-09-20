@@ -22,7 +22,7 @@ def createData():
     res = {"name": ["Mayue", "Lilin", "Wuyun"], "pay": [3000, 4500, 8000]}
     global salary
     salary = DataFrame(res)
-    # print(salary)
+    #print(salary)
 
 
 # 添加列['tax']=[0.05,0.05,0.1]
@@ -34,15 +34,15 @@ def addColumnData():  # 为不存在的列赋值会创建新的列
 # 添加行
 def addLineData():
     salary.loc[3] = {'name': 'Liuxi', 'pay': 5000, 'tax': 0.05}
-    print(salary)
+    # print(salary)
 
 
 # 删除
 def delLine():
     # 删除第四行
-    # salary.drop(salary.index[3],inplace=True)
+    salary.drop(salary.index[3],inplace=True)
     # 删除第三列
-    salary.drop(salary.columns[2], axis=1, inplace=True)
+    #salary.drop(salary.columns[2], axis=1, inplace=True)
     print(salary)
 
 
@@ -54,5 +54,5 @@ if __name__ == '__main__':
     createData()
     addColumnData()
     addLineData()
-    #delLine()
+    delLine()
     updateData()
