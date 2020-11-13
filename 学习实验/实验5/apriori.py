@@ -3,8 +3,7 @@
 # @FileName: apriori.py
 # @Author  : CNPolaris
 
-from apriori_python import apriori
-import numpy as np
+from apyori import apriori
 import pandas as pd
 
 """
@@ -76,5 +75,6 @@ print(u'\n 转换完毕。')
 del b  # 删除中间变量 b，节省内存
 support = 0.2  # 最小支持度
 confidence = 0.5  # 最小置信度
+min_lift = 0.0
 ms = '---'  # 连接符，默认'--'，用来区分不同元素，如 A--B。需要保证原始表格中不含有该字符
 find_rule(data, support, confidence, ms).to_csv(outputfile)  # 保存结果
