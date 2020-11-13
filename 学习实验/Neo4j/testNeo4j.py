@@ -7,10 +7,11 @@ from py2neo import Graph, Node, Relationship, NodeMatcher
 import pandas as pd
 import os
 
+graph = Graph('bolt://localhost:7687', usename='neo4j', password='tianxin')
+
 
 def importRelation():
     # 连接Neo4j图数据库
-    graph = Graph('http://localhost:7474', usename='neo4j', password='tianxin')
     """
     Neo4j+Python构建中药知识图谱测试
     """
@@ -47,3 +48,15 @@ def importRelation():
 
 
 importRelation()
+# res = graph.run("MATCH (n) RETURN n WHERE ").data()
+# links = graph.run("MATCH ()-[r]->() RETURN r").data()
+# for i,j in zip(res,links):
+#     print(i)
+#     print(j)
+#     print('\n')
+# def getName(id):
+#     result = graph.run("MATCH (r) WHERE id(r) = "+str(id)+ " RETURN r")
+#     # print(result)
+#     return type(result)
+#
+# print(getName(1))
