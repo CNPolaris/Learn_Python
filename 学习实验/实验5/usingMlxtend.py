@@ -24,7 +24,7 @@ data = pd.DataFrame(b).fillna(0)  # 空值用 0 填充
 """
 transaction = TransactionEncoder()
 transaction_arr = transaction.fit(data).transform(data)
-# print(data)
+print(data)
 """
 输出频繁项集
 """
